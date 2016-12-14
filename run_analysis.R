@@ -146,9 +146,9 @@ AnalyzedData <- ProcessedData %>%
 colnames(AnalyzedData)[3:68] <- paste0("mean-", names(AnalyzedData[,3:68]))
 
 
-# STAGE 5 -------- Exporting (Writing) Analyzed Data to CSV ------------------------#
+# STAGE 5 -------- Exporting (Writing) Analyzed Data to Txt ------------------------#
 # ----------------------------------------------------------------------------------#
 
-# Write Analysis Data Frame to CSV
+# Write Analysis Data Frame to Txt
 
-write.csv(AnalyzedData, file = "AnalyzedData.csv")
+write.table(AnalyzedData, file = "AnalyzedData.txt", row.names = FALSE)
