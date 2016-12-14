@@ -3,13 +3,13 @@
 ## Introduction
 This project processes and analyzes data collected from experiments carried out with a group of 30 volunteers (subjects) who performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
 
-The analysis csv file produced provides the mean of the standard deviaton and mean measures for each grouping of Subject ID and Activity.
+The analysis txt file produced provides the mean of the standard deviaton and mean measures for each grouping of Subject ID and Activity.
 
 
 ## Repo Contents
 This repo contains the following:
-* A script titled `run_analysis.R` that loads, processes, and produces a file titled "AnalyzedData.csv" analyzing data from the Human Activity Recognition Using Smartphones Dataset.
-* A Codebook describing the data contained in the "AnalyzedData.csv" file.
+* A script titled `run_analysis.R` that loads, processes, and produces a file titled "AnalyzedData.txt" analyzing data from the Human Activity Recognition Using Smartphones Dataset.
+* A Codebook describing the data contained in the "AnalyzedData.txt" file.
 
 
 ## Data Processing
@@ -44,8 +44,8 @@ The `run_analysis.R` script processes the data in stages as follows:
 1. Group Data By SubjectID and Activity and Calculate the Mean for Each Measure
 2. Prepend Each Measure Name (Measure Column Name) with Mean to Indicate the Value is The Mean
 
-####STAGE 5 - Exporting (Writing) Analyzed Data to CSV
-1. Write Analysis Data Frame to CSV
+####STAGE 5 - Exporting (Writing) Analyzed Data to Txt
+1. Write Analysis Data Frame to Txt
 
 
 ## Reproducing The Analysis
@@ -54,4 +54,4 @@ The `run_analysis.R` script processes the data in stages as follows:
 2. Download the [Human Activity Recognition Using Smartphones Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 3. Unzip the file and place the following files in your working directory: `X_train.txt`, `X_test.txt`, `y_train.txt`, `y_test.txt`, `activity_labels.txt`, `features.txt`.
 4. Place the `run_analysis.R` in your working directory and source it in RStudio to execute it.
-5. The output "AnalyzedData.csv" file will be produced and placed in your working directory.
+5. The output "AnalyzedData.txt" file will be produced and placed in your working directory.
