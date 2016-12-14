@@ -53,5 +53,5 @@ The `run_analysis.R` script processes the data in stages as follows:
 1. Clone this repo
 2. Download the [Human Activity Recognition Using Smartphones Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 3. Unzip the file and place the following files in your working directory: `X_train.txt`, `X_test.txt`, `y_train.txt`, `y_test.txt`, `activity_labels.txt`, `features.txt`.
-4. Place the `run_analysis.R` in your home directory and source it in RStudio to execute it.
+4. Place the `run_analysis.R` in your working directory and source it in RStudio to execute it.
 5. The output "AnalyzedData.csv" file will be produced and placed in your working directory.
