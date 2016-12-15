@@ -80,13 +80,9 @@ colnames(XTrain_Raw) <- Features_Raw[,2]
 
 # Add the Activity Column to the Data Frames
 
-YTest_Raw <- merge(YTest_Raw, ActLabels_Raw, "V1", all.x = TRUE )
+XTest_Raw <- cbind(YTest_Raw[,1], XTest_Raw)
 
-YTrain_Raw <- merge(YTrain_Raw, ActLabels_Raw, "V1", all.x = TRUE )
-
-XTest_Raw <- cbind(YTest_Raw[,2], XTest_Raw)
-
-XTrain_Raw <- cbind(YTrain_Raw[,2], XTrain_Raw)
+XTrain_Raw <- cbind(YTrain_Raw[,1], XTrain_Raw)
 
 colnames(XTest_Raw)[1] <- "Activity"
 
@@ -107,6 +103,17 @@ colnames(XTrain_Raw)[1] <- "SubjectID"
 # Merge the Test And Training Data Frames
 
 XData_Merged <- rbind(XTrain_Raw, XTest_Raw)
+
+
+# Add the Activity Labels
+
+XData_Merged <- merge(XData_Merged, ActLabels_Raw, by.x = "Activity", by.y = "V1", all.x = TRUE )
+
+XData_Merged <- XData_Merged[,!(names(XData_Merged) %in% c("Activity"))]
+
+colnames(XData_Merged)[563] <- "Activity"
+
+XData_Merged <- XData_Merged[, c(1,563,2:562)]
 
 
 
